@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AuthFlow | Secure Auth</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+
+    <!-- LEFT BRAND SECTION -->
+    <div class="brand-panel">
+        <h1>Auth Flow</h1>
+        <p>
+            Build secure applications faster <br>
+            with modern authentication powered <br>
+            by FastAPI.
+        </p>
+    </div>
+
+    <!-- RIGHT ACTION SECTION -->
+    <div class="form-panel">
+        <div class="form-card">
+
+            <h2>Get Started</h2>
+            <p class="subtitle">
+                Login or create an account to continue
+            </p>
+
+            <button onclick="goLogin()">Login</button>
+
+            <button onclick="goLoginOTP()">Login With OTP</button>
+
+            <button style="margin-top:15px" onclick="goRegister()">
+                Create Account
+            </button>
+
+            <div class="footer-text">
+                By continuing, you agree to our <br>
+                <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/main.js"></script>
+</body>
+</html>

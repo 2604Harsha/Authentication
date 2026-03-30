@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/static/dashbaord.css">
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+    <h2 class="logo">Auth Flow</h2>
+    <nav>
+        <a class="active" href="/dashboard">Dashboard</a>
+        <a href="/profile">Profile</a>
+        <a href="/security">Security</a>
+        <a href="/activity">Activity</a>
+        <a href="settings">Settings</a>
+    </nav>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div>
+            <h1 id="greeting"></h1>
+            <p class="subtitle">Welcome back, <span id="username"></span></p>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- DASHBOARD CARDS -->
+    <section class="cards">
+        <div class="card">
+            <h3>Email Status</h3>
+            <p class="status green">Verified</p>
+        </div>
+
+        <div class="card">
+            <h3>Role</h3>
+            <p id="role">User</p>
+        </div>
+
+        <div class="card">
+            <h3>Account</h3>
+            <p class="status blue">Active</p>
+        </div>
+
+        <div class="card">
+            <h3>Security</h3>
+            <p class="status yellow">Good</p>
+        </div>
+    </section>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

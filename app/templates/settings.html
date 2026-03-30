@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    {% extends "base.html" %}
+
+    {% block title %}Activity{% endblock %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="/static/settings.css">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="main">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div>
+            <h1>Settings ⚙️</h1>
+            <p class="subtitle">Manage your account preferences</p>
+        </div>
+    </div>
+
+    <div class="settings-grid">
+
+        <!-- PROFILE SETTINGS -->
+        <div class="settings-card">
+            <h3>Profile Settings</h3>
+
+            <label>Full Name</label>
+            <input type="text" value="name">
+
+            <label>Email</label>
+            <input type="email" value="name@gmail.com" disabled>
+
+            <button class="primary-btn">Update Profile</button>
+        </div>
+
+        <!-- SECURITY SETTINGS -->
+        <div class="settings-card">
+            <h3>Security</h3>
+
+            <label>New Password</label>
+            <input type="password" placeholder="Enter new password">
+
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm password">
+
+            <button class="primary-btn">Change Password</button>
+        </div>
+
+        <!-- PREFERENCES -->
+        <div class="settings-card">
+            <h3>Preferences</h3>
+
+            <div class="toggle-row">
+                <span>Email Notifications</span>
+                <input type="checkbox" checked>
+            </div>
+
+            <div class="toggle-row">
+                <span>Login Alerts</span>
+                <input type="checkbox" checked>
+            </div>
+        </div>
+
+        <!-- DANGER ZONE -->
+        <div class="settings-card danger">
+            <h3>Danger Zone</h3>
+            <p>This action cannot be undone</p>
+            <button class="danger-btn">Deactivate Account</button>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/settings.js"></script>
+{% endblock %}
+    
+</body>
+</html>

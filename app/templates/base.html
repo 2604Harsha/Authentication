@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Auth Flow{% endblock %}</title>
+    <link rel="stylesheet" href="/static/dashbaord.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2 class="logo">Auth Flow</h2>
+    <nav>
+        <a href="/dashboard" class="{% if request.url.path == '/dashboard' %}active{% endif %}">Dashboard</a>
+        <a href="/profile" class="{% if request.url.path == '/profile' %}active{% endif %}">Profile</a>
+        <a href="/security" class="{% if request.url.path == '/security' %}active{% endif %}">Security</a>
+        <a href="/activity" class="{% if request.url.path == '/activity' %}active{% endif %}">Activity</a>
+        <a href="/settings" class="{% if request.url.path == '/settings' %}active{% endif %}">Settings</a>
+    </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+    {% block content %}{% endblock %}
+</div>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

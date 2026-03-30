@@ -1,0 +1,70 @@
+.security-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+    padding-top: 30px;
+}
+
+/* CARD */
+.security-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    color: white;
+}
+
+.security-card h2 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.security-card label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.security-card input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.security-card button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #4da6ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* STATUS */
+.security-info {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.security-info li {
+    margin-bottom: 10px;
+}
+
+.good {
+    color: #4dff88;
+}
+
+#passwordMessage {
+    margin-top: 12px;
+    font-size: 14px;
+}

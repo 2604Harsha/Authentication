@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    {% extends "base.html" %}
+
+    {% block title %}Activity{% endblock %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="/static/activity.css">
+    {% endblock %}
+</head>
+<body>
+    
+{% block content %}
+<div class="activity-wrapper">
+
+    <h2 class="activity-title">Login Activity</h2>
+
+    <div class="activity-card" id="activityList">
+        <p class="loading">Loading login history...</p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/activity.js"></script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+    {% extends "base.html" %}
+
+    {% block title %}Security{% endblock %}
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="/static/security.css">
+    {% endblock %}
+
+</head>
+<body>
+    
+{% block content %}
+<div class="security-wrapper">
+
+    <!-- CHANGE PASSWORD -->
+    <div class="security-card">
+        <h2>Change Password</h2>
+
+        <label>Current Password</label>
+        <input type="password" id="currentPassword" placeholder="Enter current password">
+
+        <label>New Password</label>
+        <input type="password" id="newPassword" placeholder="Enter new password">
+
+        <label>Confirm New Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm new password">
+
+        <button onclick="changePassword()">Update Password</button>
+
+        <p id="passwordMessage"></p>
+    </div>
+
+    <!-- ACCOUNT SECURITY INFO -->
+    <div class="security-card">
+        <h2>Account Security</h2>
+        <ul class="security-info">
+            <li>Email Verified: <span class="good">Yes</span></li>
+            <li>Account Status: <span class="good">Active</span></li>
+            <li>Password Strength: <span class="good">Strong</span></li>
+        </ul>
+    </div>
+
+</div>
+   {% endblock %}
+
+   {% block extra_js %}
+   <script src="/static/security.js"></script>
+   {% endblock %}
+</body>
+</html>
